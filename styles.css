@@ -1,0 +1,267 @@
+html {
+    background-image: url("https://static.wixstatic.com/media/d6dbb4_708d00aca2944d369b16860c5b386e95~mv2.png");
+    background-repeat: repeat;
+    background-color: rgba(255,253,247,0.98);
+    background-blend-mode: screen;
+}
+
+* {
+    font-family: 'Lato', sans-serif;
+}
+
+img {
+    display: block;
+    width: 100px;
+    height: 100px;
+    margin: 30px auto 10px auto;
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 55px;
+    margin-bottom: 10px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+h2 {
+    font-style: oblique;
+    font-weight: 300;
+    font-size: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+h3 {
+    text-indent: 30px;
+    text-decoration: wavy underline;
+}
+
+h4 {
+    text-indent: 40px;
+    font-weight: 500;
+    text-decoration: dotted underline;
+}
+
+p {
+    margin: 5px;
+    text-align: center;
+}
+
+hr {
+    width: 70%;
+    content: "§";
+}
+
+button {
+    background-color: rgba(255,255,255,0);
+}
+
+.design {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    height: 600px;
+    background-color: rgba(255,255,255,0);
+    margin: auto;
+    color: burlywood;
+    border: 2px dotted goldenrod;
+}
+
+.greeting {
+    position: absolute;
+    cursor: move;
+    resize: auto;
+    top: 530px;
+    align-content: center;
+    width: fit-content;
+    text-align: center;
+    background-color: rgba(255,255,255,0);
+}
+
+.signoff {
+    position: absolute;
+    cursor: move;
+    align-content: center;
+    clear: all;
+    width: fit-content;
+    text-align: center;
+    background-color: rgba(255,255,255,0)
+}
+
+.clientimage {
+    position: absolute;
+    cursor: move;
+    top: 600px;
+    width: 150px;
+    height: 150px;
+    background-color: rgba(255,255,255,0);
+    border: 1px dotted burlywood;
+    background-position: center;
+    background-size: cover;
+    font-family: monospace;
+    text-align: center;
+    line-height: 35px;
+}
+
+.WAI {
+    position: relative;
+    top: 250px;
+    width: 500px;
+    height: 100px;
+    background-image: url('WAI\ Strip.png');
+    background-color: rgba(255,255,255,0);
+    background-position: center;
+    background-size: cover;
+}
+
+.instructions {
+    text-align: center;
+    font-style: oblique;
+    font-family: monospace;
+    letter-spacing: 1px;
+    line-height: 30px;
+}
+
+.export-design {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    background: none;
+    margin: auto;
+    width: 800px;
+}
+
+.export-design button {
+    border: 3px solid green;
+    margin: 10px 30px;
+    width: 200px;
+    height: 50px;
+    font-size: 15px;
+}
+
+.export:hover{
+    color:beige;
+    background: linear-gradient(30deg, #06950a,#046307);
+    border: 3px solid black;
+}
+
+output {
+    display: block;
+    font-style: oblique;
+    font-family: monospace;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    line-height: 40px;
+    text-align: center;
+}
+
+.remove {
+    border: 1px dotted goldenrod;
+    margin: 20px auto;
+    width: 750px;
+}
+
+.remove p {
+    margin: 20px auto 5px auto;
+    font-style: italic;
+}
+
+.null-buttons {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    background: none;
+}
+
+.null-buttons button {
+    border: 3px dotted red;
+    margin: 20px 30px;
+}
+
+.null:hover{
+    color: white;
+    background-color: crimson;
+    border: 3px solid black;
+}
+
+label {
+    display: inline-block;
+    margin: 20px;
+    background-color: rgba(255,255,255,0);
+    text-align: left;
+}
+
+input {
+    display: inline-block;
+    text-align: left;
+}
+
+.custom {
+    border: 1px solid bisque;
+    width: 600px;
+    margin: 20px auto;
+    background-color: rgba(255,255,255,0);
+}
+
+.custom p {
+    text-align: left;
+    text-indent: 30px;
+    font-style: oblique;
+    font-size: smaller;
+}
+
+.randomdesign {
+    border: 2px solid teal;
+    margin: 10px auto;
+    width: 200px;
+    height: 30px;
+}
+
+.randomdesign:hover {
+    color: black;
+    border: 3px solid #070463;
+    background: linear-gradient(30deg, #E3E3FF, #DFF2FD, #E2FCE6, #FCFADE,#FFEEE2,#FFDBDB);
+}
+
+.design-input {
+    font-style: italic;
+    text-decoration: underline;
+    border: 2px solid black;
+    width: 300px;
+    margin: 10px auto;
+    text-align: center;
+}
+
+.design-input:hover {
+    background-color: black;
+    border: 2px solid gold;
+    transition: 0.25s;
+    color: goldenrod;
+}
+
+#design-input {
+    display: none;
+}
+
+.file-input {
+    font-style: italic;
+    text-decoration: underline;
+    border: 2px solid black;
+    width: 300px;
+    margin: 10px auto;
+    text-align: center;
+}
+
+.file-input:hover {
+    background-color: black;
+    border: 2px solid gold;
+    transition: 0.25s;
+    color: goldenrod;
+}
+
+#file-input {
+    display: none;
+}

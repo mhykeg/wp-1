@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href = "styles.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <title>Design Generator</title>
+</head>
+
+<header>
+    <a href="https://www.thewaicompany.com"><img src="https://static.wixstatic.com/media/d6dbb4_9ea4df24698846a3ac5c0d6758128ce1~mv2.png"></a>
+    <h1>Design Editor - WAI</h1>
+    <h2>Create your own design in seconds.</h2>
+</header>
+
+<body>
+    <div class="design" id="design">
+        <div class="greeting" id="greeting">Happy New Year!</div>
+        <div class="signoff" id="signoff">- WAI</div>
+        <div class="clientimage" id="clientimage"><br>Your logo will appear here</div>
+        <div class="WAI" id="WAI"></div>
+    </div>
+
+    <div class="instructions">*Click and hold to drag and reposition your text / image.</div>
+
+    <div class="export-design">
+        <button type="button" id="export-button" name="Export Design" value="Export Design" class="export">Export Design</button>
+    </div>
+
+    <div class="remove">
+        <p>Keep what you need, clear what you don't.</p>
+        <div class="null-buttons">
+            <button type="button" id="null-greeting-button" name="No Greeting" value="No Greeting" class="null">Remove Greeting</button>
+            <button type="button" id="null-signoff-button" name="No Signoff" value="No Signoff" class="null">Remove Sign-Off</button>
+            <button type="button" id="null-logo-button" name="No Logo" value="No Logo" class="null">Remove Logo</button>
+            <button type="button" id="null-design-button" name="No Design" value="No Design" class="null">Remove Design</button>
+        </div>
+    </div>
+    
+    <div class="custom texts">
+        <h3>#1 Customise your text:</h3>
+        <p>(max 50 characters per text)</p>
+        <label for="greeting-text-input">Greeting Text:<br></label>
+        <input type="text" id="greeting-text-input" name="greeting-text-input" maxlength="50" required onchange="changeGreetingText()" value="Happy New Year!"><br>
+        <label for="greeting-font">Greeting Font:</label>
+        <select name="greeting-font" id="greeting-font" onchange="changeGreetingFont()">
+            <option value="arial">Arial</option>
+            <option value="courier new">Courier New</option>
+            <option value="garamond">Garamond</option>
+            <option value="georgia">Georgia</option>
+            <option value="helvetica">Helvetica</option>
+            <option value="lato" selected="selected">Lato (Default)</option>
+            <option value="tahoma">Tahoma</option>
+            <option value="times new roman">Times New Roman</option>
+            <option value="verdana">Verdana</option>
+        </select><br>
+        <label for="greeting-font-size">Greeting Font Size:</label>
+        <select name="greeting-font-size" id="greeting-font-size" onchange="changeGreetingFontSize()">
+            <option value="16" selected="selected">16 (Default)</option>
+            <option value="18">18</option>
+            <option value="20">20</option>
+            <option value="24">24</option>
+            <option value="28">28</option>
+            <option value="32">32</option>
+            <option value="36">36</option>
+            <option value="40">40</option>
+            <option value="48">48</option>
+            <option value="56">56</option>
+        </select><br>
+        <label for="greeting-font-color">Greeting Font Color:</label>
+        <select name="greeting-font-color" id="greeting-font-color" onchange="changeGreetingFontColor()">
+            <option value="black">Black</option>
+            <option value="blue">Blue</option>
+            <option value="burlywood" selected="selected">Burlywood (Default)</option>
+            <option value="brown">Brown</option>
+            <option value="green">Green</option>
+            <option value="maroon">Maroon</option>
+            <option value="navy">Navy</option>
+            <option value="olive">Olive</option>
+            <option value="orange">Orange</option>
+            <option value="pink">Pink</option>
+            <option value="red">Red</option>
+            <option value="teal">Teal</option>
+        </select><br><hr>
+        <label for="signoff-input">Sign-Off Text:<br></label>
+        <input type="text" id="signoff-input" name="signoff-input" maxlength="50" required onchange="changeSignoff()" value="- WAI"><br>
+        <label for="signoff-font">Signoff Font:</label>
+        <select name="signoff-font" id="signoff-font" onchange="changeSignoffFont()">
+            <option value="arial">Arial</option>
+            <option value="courier new">Courier New</option>
+            <option value="garamond">Garamond</option>
+            <option value="georgia">Georgia</option>
+            <option value="helvetica">Helvetica</option>
+            <option value="lato" selected="selected">Lato (Default)</option>
+            <option value="tahoma">Tahoma</option>
+            <option value="times new roman">Times New Roman</option>
+            <option value="verdana">Verdana</option>
+        </select><br>
+        <label for="signoff-font-size">Signoff Font Size:</label>
+        <select name="signoff-font-size" id="signoff-font-size" onchange="changeSignoffFontSize()">
+            <option value="16" selected="selected">16 (Default)</option>
+            <option value="18">18</option>
+            <option value="20">20</option>
+            <option value="24">24</option>
+            <option value="28">28</option>
+            <option value="32">32</option>
+            <option value="36">36</option>
+            <option value="40">40</option>
+            <option value="48">48</option>
+            <option value="56">56</option>
+        </select><br>
+        <label for="signoff-font-color">Signoff Font Color:</label>
+        <select name="signoff-font-color" id="signoff-font-color" onchange="changeSignoffFontColor()">
+            <option value="black">Black</option>
+            <option value="blue">Blue</option>
+            <option value="burlywood" selected="selected">Burlywood (Default)</option>
+            <option value="brown">Brown</option>
+            <option value="green">Green</option>
+            <option value="maroon">Maroon</option>
+            <option value="navy">Navy</option>
+            <option value="olive">Olive</option>
+            <option value="orange">Orange</option>
+            <option value="pink">Pink</option>
+            <option value="red">Red</option>
+            <option value="teal">Teal</option>
+        </select>
+    </div>
+
+    <div class="custom designs">
+        <h3>#2 Customise your design:</h3>
+        <div class="random-design">
+            <label for="design-button">Need Background Design Ideas?</label>
+            <button type="button" id="design-button" name="Random Design" value="Random Design" onclick="randomDesign()" class="randomdesign">Generate a Random Design!</button>
+        </div>
+        <label for="design-choice">Design Choice:</label>
+        <select name="design-choice" id="design-choice" onchange="chooseDesign()">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+        </select>
+        <div class="design-input">
+            <label for="design-input">Upload your Design</label><br>
+                <input type="file" accept="image/*" id="design-input" onchange="displayDesign()">
+        </div>
+    </div>
+
+    <div class="custom logo">
+        <h3>#3 Customise your logo:</h3>
+        <div class="file-input">
+            <label for="file-input">Upload your Logo</label><br>
+                <input type="file" accept="image/*" id="file-input" onchange="displayImage()">
+        </div>
+    </div>
+</body>
+
+<footer>
+        <script src="script.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" integrity="sha512-BNaRQnYJYiPSqHHDb58B0yaPfCu+Wgds8Gp/gU33kqBtgNS4tSPHuGibyoeqMV/TJlSKda6FXzoEyYGjTe+vXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</footer>
+
+</html>
